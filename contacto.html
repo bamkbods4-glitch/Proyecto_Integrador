@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contáctanos | Clases para Todos</title>
+  <link rel="stylesheet" href="contacto.css">
+  <link rel="icon" href="./img/logo.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="./index.html" class="navbar-brand">
+        <img src="./img/logo.png" alt="Logo Clases para Todos" class="logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./que.html">¿Qué es?</a></li> 
+        <li><a href="./objetivo.html">Objetivo</a></li>
+        <li><a href="./contacto.html" class="active">Contáctanos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contacto -->
+  <section class="contacto">
+    <div class="container">
+      <br><br>
+      <h2>Envíanos tu respuesta</h2>
+      <p>Tu aporte también puede ayudar a construir una educación más inclusiva y de calidad.</p><br>
+      <div class="formulario">
+        <iframe 
+          src="https://forms.gle/DokKQ7TQjKBwKqWB6"
+          width="100%"
+          height="700"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0">
+        </iframe>
+        <!-- Iframe embebe un formulario (Google Forms en este caso). 
+             Atributos:
+             - width/height: tamaño visible del iframe.
+             - frameborder: elimina el borde clásico en navegadores antiguos.
+             - marginheight/marginwidth: controla márgenes internos en algunos navegadores.
+             Nota: por seguridad algunos navegadores bloquean iframes de ciertos orígenes si hay políticas (CSP) o X-Frame-Options en el servidor externo. -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center custom-footer">
+    <div class="container">
+      <p>Técnico Laboral Desarrollo de Software</p>
+
+      <p class="footer-small">
+        Proyecto integrador CESDE |
+        <a href="https://www.un.org/sustainabledevelopment/es/education/" target="_blank" rel="noopener">ODS 4</a> |
+        Equipo <a href="./que.html#equipo">BAMKB</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Botón de ir arriba -->
+  <a href="#top" class="btn-up" title="Volver arriba">↑</a>
+</body>
+</html>

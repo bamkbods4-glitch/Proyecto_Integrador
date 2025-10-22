@@ -1,0 +1,169 @@
+/* Fuente importada */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Variables globales */
+/* Estas variables permiten cambiar colores globalmente desde un solo lugar. */
+:root {
+  --bg-white: #ffffff;  
+  --text-dark: #111111;  
+  --muted: #6b6b6b;      
+  --magenta: #F20CA2;   
+  --blue: #5464BF;     
+  --yellow: #F2E205;    
+  --orange: #F27405;     
+}
+
+/* Configuración de básica de toda la página */
+* {
+  box-sizing: border-box; /* Incluye padding y borde dentro del ancho total del elemento */
+  margin: 0;              /* Elimina márgenes por defecto */
+  padding: 0;             /* Elimina rellenos por defecto */
+  font-family: 'Inter', sans-serif; /* Aplica la fuente Inter a toda la página */
+}
+
+/*  Estilo del body */
+body {
+  background: var(--bg-white); 
+  color: var(--text-dark);   
+  line-height: 1.6;  /* Altura de línea */
+}
+
+
+/* Navbar */
+.custom-navbar {
+  background-color: var(--bg-white); /* Fondo blanco */
+  padding: 10px 20px;                /* Espacio */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra */
+}
+
+.custom-navbar .logo {
+  width: 180px;       /* Tamaño del logo */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.custom-navbar .nav-link {
+  color: var(--text-dark);      /* Color de los enlaces del menú */
+  margin: 0 10px;               /* Separación  entre enlaces */
+  text-decoration: none;        /* Elimina el subrayado */
+  font-weight: 500;             /* Grosor del texto */
+}
+
+.custom-navbar .nav-link:hover {
+  color: var(--magenta); /* Cambia el color del enlace al pasar el cursor */
+}
+
+
+/* Sección principal de la página */
+.hero {
+  height: 65vh; /* Altura de la sección */
+  background-image: url('https://images.pexels.com/photos/8466701/pexels-photo-8466701.jpeg');
+  background-size: cover;    /* La imagen cubre toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  display: flex;             /* Centra el contenido con Flexbox */
+  flex-direction: column;    /* Coloca los elementos en columna */
+  justify-content: center;   /* Centra verticalmente */
+  align-items: center;       /* Centra horizontalmente */
+  text-align: center;        /* Alinea el texto al centro */
+  color: white;              /* Texto blanco */
+  position: relative;        /* Permite posicionar la capa ::before encima */
+}
+
+/* Capa oscura sobre el fondo (efecto de superposición) */
+.hero::before {
+  content: "";                         /* Crea un pseudo-elemento vacío */
+  position: absolute;                  /* Se posiciona sobre el hero */
+  inset: 0;                            /* Ocupa todo el espacio del contenedor */
+  background-color: rgba(0, 0, 0, 0.4); /* Color negro semitransparente */
+}
+
+/* Texto y botones de la sección principal de la página */
+.hero h1 {
+  font-size: 2.4rem; /* Tamaño del título */
+  font-weight: 700;  /* Letra en negrita */
+  z-index: 1;        /* Se coloca por encima de la capa oscura */
+}
+
+.hero p {
+  font-size: 1.1rem; /* Tamaño de texto */
+  margin-top: 10px;  /* Separación con el título */
+  z-index: 1;        /* También por encima de la capa oscura */
+}
+
+.hero a {
+  display: inline-block;                   /* Se comporta como botón */
+  margin-top: 20px;                        /* Separación superior */
+  padding: 10px 20px;                      /* Espaciado interno */
+  border: 2px solid var(--magenta);        /* Borde magenta */
+  color: var(--magenta);                   /* Texto magenta */
+  background: transparent;                 /* Fondo transparente */
+  border-radius: 50px;                     /* Bordes redondeados tipo píldora */
+  text-decoration: none;                   /* Sin subrayado */
+  font-weight: 600;                        /* Texto más grueso */
+  z-index: 1;                              /* Por encima del overlay */
+}
+
+.hero a:hover {
+  background: var(--magenta); /* Al pasar el cursor: fondo magenta */
+  color: white;               /* Texto blanco */
+}
+
+
+/* Sección interna */
+.section {
+  padding: 60px 10%; /* Espaciado vertical grande y márgenes laterales */
+  text-align: center; /* Centra todo el texto dentro */
+}
+
+
+/* Footer */
+.custom-footer {
+  background: var(--bg-white);               /* Fondo blanco */
+  color: var(--text-dark);                   /* Texto oscuro */
+  text-align: center;                        /* Centrado */
+  padding: 25px 10%;                         /* Espaciado interno */
+  border-top: 1px solid rgba(0,0,0,0.1);     /* Línea superior sutil */
+}
+
+.custom-footer a {
+  color: var(--magenta);     /* Enlaces magenta */
+  text-decoration: none;     /* Sin subrayado */
+  font-weight: 500;          /* Grosor medio */
+}
+
+.custom-footer a:hover {
+  text-decoration: underline; /* Subraya al pasar el cursor */
+}
+
+
+/* Botón para subir */
+.btn-up {
+  position: fixed;       /* Botón fijo */
+  right: 20px;           /* Distancia desde el borde derecho */
+  bottom: 20px;          /* Distancia desde el borde inferior */
+  width: 50px;           /* Ancho del botón */
+  height: 50px;          /* Alto del botón */
+  border-radius: 50%;    /* Forma circular */
+  background: var(--magenta); /* Fondo magenta */
+  color: white;          /* Texto o ícono blanco */
+  border: none;          /* Sin borde externo */
+  cursor: pointer;       /* Muestra el cursor de clic */
+  font-size: 20px;       /* Tamaño del ícono o texto */
+  display: none;         /* Oculto por defecto (se mostrará con JS) */
+}
+
+.btn-up:hover {
+  background: var(--yellow); /* Al pasar el cursor cambia a amarillo */
+  color: black;              /* Texto o ícono se vuelve negro */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: 55vh;     /* Reduce la altura de la sección principal en móviles */
+    padding: 0 20px;  /* Añade espacio lateral */
+  }
+  .hero h1 {
+    font-size: 1.8rem; /* Disminuye el tamaño del título */
+  }
+}

@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap'); 
+
+:root {
+  --magenta: #f20ca2; 
+  --blue: #5464bf; 
+  --yellow: #f2e205; 
+  --orange: #f27405;
+  --text-dark: #333; 
+  --bg-white: #ffffff;
+  --bg-light: #fff;
+  --bg-soft: #f8f8f8;
+}
+
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif; 
+}
+
+body {
+  background: var(--bg-light); 
+  color: var(--text-dark); 
+  line-height: 1.6; 
+}
+
+.navbar {
+  background: var(--bg-light);
+  padding: 0.8rem 2rem; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar .container {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.logo {
+  width: 150px; /* Tamaño del logo */
+}
+
+.nav-links {
+  list-style: none; /* Quita los puntos de la lista */
+  display: flex; /* Alinea los enlaces horizontalmente */
+  gap: 1rem; /* Espacio entre ellos */
+}
+
+.nav-links a {
+  text-decoration: none; /* Quita subrayado */
+  color: var(--text-dark); /* Color del texto */
+  font-weight: 500; /* Peso medio */
+  transition: color 0.3s; /* Transición al cambiar color */
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--magenta); /* Cambia el color al pasar */
+}
+
+.frase-magenta {
+  background: var(--magenta); 
+  color: white; /* Texto blanco */
+  text-align: center; /* Centra el texto */
+  padding: 2rem 1.5rem; /* Espaciado interno */
+  font-style: italic; /* Texto en cursiva */
+  font-weight: 500; /* Peso medio */
+}
+
+.objetivo {
+  background: var(--bg-soft);
+  padding: 3rem 6%; 
+}
+
+.objetivo-contenido {
+  display: flex; /* Contenedor flexible */
+  flex-wrap: wrap; /* Permite que se acomoden en varias líneas */
+  align-items: center; /* Centra los elementos verticalmente */
+  gap: 2rem; /* Espacio entre elementos */
+}
+
+.objetivo-texto {
+  flex: 1; /* Ocupa el mismo espacio que su compañero */
+  min-width: 300px; /* Ancho mínimo */
+}
+
+.objetivo-texto h2 {
+  color: var(--magenta); /* Título en magenta */
+  margin-bottom: 1rem; /* Espacio inferior */
+}
+
+.objetivo-texto p {
+  margin-bottom: 1rem; /* Espaciado entre párrafos */
+}
+
+.objetivo-img {
+  flex: 1; /* Imagen ocupa el mismo espacio que el texto */
+  min-width: 280px; /* Ancho mínimo */
+}
+
+.objetivo-img img {
+  width: 100%; /* Imagen ocupa todo el ancho */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.desafio {
+  padding: 3rem 6%; /* Espaciado general */
+  text-align: center; /* Centra el texto */
+}
+
+.desafio h2 {
+  color: var(--magenta); /* Color del título */
+  margin-bottom: 1rem; /* Espacio inferior */
+}
+
+.desafio p {
+  max-width: 800px; /* Limita el ancho del texto */
+  margin: 0 auto 1rem; /* Centra horizontalmente */
+}
+
+.cards {
+  display: grid; /* Usa diseño de cuadrícula */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Ajusta columnas según el tamaño */
+  gap: 1rem; /* Espacio entre tarjetas */
+  margin-top: 2rem; /* Separación del texto anterior */
+}
+
+.card {
+  color: #fff; /* Texto blanco */
+  padding: 1.5rem; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.magenta { background: var(--magenta); } /* Tarjeta rosada */
+.azul { background: var(--blue); } /* Tarjeta azul */
+.amarillo { background: var(--yellow); color: #222; } /* Tarjeta amarilla con texto oscuro */
+.naranja { background: var(--orange); } /* Tarjeta naranja */
+
+.pilares {
+  background: var(--bg-soft); /* Fondo gris claro */
+  padding: 3rem 6%; /* Espaciado interno */
+  text-align: center; /* Centrado */
+}
+
+.pilares h2 {
+  color: var(--magenta); /* Color del título */
+}
+
+.pilares-grid {
+  display: grid; /* Cuadrícula */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Se ajusta al tamaño */
+  gap: 1rem; /* Espacio entre columnas */
+  margin-top: 2rem; /* Separación superior */
+}
+
+.pilar {
+  background: white; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta el exceso de contenido */
+}
+
+.pilar img {
+  width: 100%; /* Imagen ocupa todo el ancho */
+  height: 180px; /* Altura fija */
+  object-fit: cover; /* Cubre sin deformarse */
+}
+
+.pilar h3 {
+  color: var(--magenta); /* Título en magenta */
+  margin: 0.8rem; /* Margen alrededor */
+}
+
+.pilar p {
+  margin: 0 0.8rem 1rem; /* Espacio inferior */
+}
+
+.resultados {
+  background: white; /* Fondo blanco */
+  padding: 3rem 6%; /* Espaciado */
+  text-align: center; /* Centrado */
+}
+
+.resultados ul {
+  list-style-type: "✔ "; /* Usa un símbolo de check o listo */
+  max-width: 600px; /* Ancho máximo */
+  margin: 0 auto 2rem; /* Centrado */
+  text-align: left; /* Texto alineado a la izquierda */
+}
+
+.resultados li {
+  margin-bottom: 0.5rem; /* Espacio entre ítems */
+}
+
+.mision {
+  background: var(--blue); /* Fondo azul */
+  color: white; /* Texto blanco */
+  text-align: center; /* Centrado */
+  padding: 3rem 1.5rem; /* Espaciado */
+}
+
+.btn-mision {
+  display: inline-block; /* Se comporta como bloque en línea */
+  background: var(--magenta); /* Fondo magenta */
+  color: white; /* Texto blanco */
+  text-decoration: none; /* Quita subrayado */
+  padding: 0.7rem 1.4rem; /* Espaciado interno */
+  border-radius: 25px; /* Botón redondeado */
+  margin-top: 1rem; /* Espacio superior */
+  transition: background 0.3s; /* Transición de color */
+}
+
+.btn-mision:hover {
+  background: var(--yellow); /* Fondo amarillo al pasar */
+  color: black; /* Texto negro */
+}
+
+.sql {
+  background: var(--bg-soft); /* Fondo gris claro */
+  text-align: center; /* Centrado */
+  padding: 3rem 1rem; /* Espaciado */
+}
+
+.sql h2 {
+  color: var(--magenta); /* Título en magenta */
+  margin-bottom: 1rem; /* Espacio inferior */
+}
+
+.sql-links {
+  display: flex; /* Contenedor flexible */
+  flex-wrap: wrap; /* Permite varias líneas */
+  justify-content: center; /* Centra los botones */
+  gap: 1rem; /* Espacio entre botones */
+  margin-top: 1rem; /* Espacio superior */
+}
+
+.btn-sql {
+  background: var(--blue); /* Fondo azul */
+  color: white; /* Texto blanco */
+  padding: 0.8rem 1.5rem; /* Espaciado */
+  border-radius: 25px; /* Bordes redondeados */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 500; /* Peso medio */
+  transition: background 0.3s ease; /* Transición suave */
+}
+
+.btn-sql:hover {
+  background: var(--magenta); /* Cambia a magenta al pasar */
+}
+
+.custom-footer {
+  background: var(--bg-white); /* Fondo blanco */
+  color: var(--text-dark); /* Texto oscuro */
+  text-align: center; /* Centrado */
+  padding: 1.5rem; /* Espaciado interno */
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Línea superior gris clara */
+}
+
+.custom-footer a {
+  color: var(--magenta); /* Enlaces magenta */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 500; /* Peso medio */
+}
+
+.custom-footer a:hover {
+  text-decoration: underline; /* Subraya al pasar */
+}
+
+.footer-small {
+  font-size: 0.85rem; /* Tamaño pequeño */
+  opacity: 0.8; /* Un poco más tenue */
+}
+
+.btn-up {
+  position: fixed; /* Fijo en pantalla */
+  right: 25px; /* Separado del borde derecho */
+  bottom: 25px; /* Separado del borde inferior */
+  background: var(--magenta); /* Fondo magenta */
+  color: white; /* Texto blanco */
+  width: 50px; /* Tamaño del botón */
+  height: 50px;
+  border-radius: 50%; /* Forma circular */
+  display: flex; /* Centra el ícono */
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem; /* Tamaño del ícono */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+  text-decoration: none; /* Sin subrayado */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+.btn-up:hover {
+  background: var(--yellow); /* Cambia a amarillo */
+  color: black; /* Texto negro */
+  transform: translateY(-4px); /* Se eleva un poco */
+}
+
+@media (max-width: 768px) {
+  .objetivo-contenido {
+    flex-direction: column; /* En móviles, los elementos van en columna */
+  }
+
+  section {
+    padding: 2.5rem 1.2rem; /* Reduce el espaciado */
+  }
+
+  .btn-up {
+    width: 45px; /* Botón más pequeño */
+    height: 45px;
+    font-size: 1.2rem; /* Ícono más pequeño */
+  }
+}

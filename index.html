@@ -1,0 +1,67 @@
+<!DOCTYPE html> <!-- Tipo de documento: HTML5 -->
+<html lang="es"> <!-- Idioma: Español -->
+<head> 
+  <meta charset="UTF-8"> <!-- Codificación que admite tildes y eñes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Hace que la página se vea bien en móviles -->
+  <title>Clases para Todos</title> <!-- Título de la pestaña del navegador -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- CSS de Bootstrap -->
+  <link rel="icon" href="./img/logo.png" type="image/x-icon" /> <!-- Favicon -->
+  <link rel="stylesheet" href="index.css">  <!-- Enlace al CSS-->
+</head>
+<body id="top"> <!-- Cuerpo del documentocon ID para la flecha-->
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg custom-navbar shadow-sm"> <!-- Navbar con clases de Bootstrap -->
+    <div class="container"> <!-- Contenedor para Navbar -->
+      <a class="navbar-brand d-flex align-items-center" href="./index.html" aria-label="Ir a inicio"> <!-- Logo, también lleva al inicio -->
+        <img src="./img/logo.png" alt="Clases para todos" class="logo"> <!-- Imagen del logo-->
+      </a>
+
+  <!-- Menú hamburguesa -->
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> <!-- Icono del botón del menú -->
+      </button>
+
+  <!-- Contenedor del menú que se colapsa en dispositivos pequeños -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto"> <!-- Lista de enlaces de navegación alineados a la derecha (ms-auto) -->
+          <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li> <!-- Enlace al inicio -->
+          <li class="nav-item"><a class="nav-link" href="./que.html">¿Qué es?</a></li> <!-- Enlace a ¿Qué es? -->
+          <li class="nav-item"><a class="nav-link" href="./objetivo.html">Objetivo</a></li> <!-- Enlace a la página objetivo -->
+          <li class="nav-item"><a class="nav-link" href="./contacto.html">Contáctanos</a></li> <!-- Enlace a la página de contacto -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección principal -->
+  <header class="hero d-flex align-items-center text-center"> 
+    <div class="overlay"></div> <!-- Capa semitransparente para mejorar el contraste del texto sobre el fondo -->
+    <div class="container position-relative"> <!-- Contenedor centrado con posición relativa para controlar la superposición -->
+      <h1>Clases para todos</h1> <!-- Título principal de la página -->
+      <p>Una oportunidad de aprender y crecer sin límites.</p> <!-- Subtítulo o descripción breve -->
+      <a href="./que.html" class="btn btn-custom mt-3">Conoce más</a> <!-- Botón que lleva a la página ¿Qué es? -->
+    </div>
+  </header>
+
+  <!-- Footer -->
+  <footer class="text-center custom-footer"> <!-- Footer centrado con clase personalizada -->
+    <div class="container"> <!-- Contenedor para mantener márgenes y centrado -->
+      <p>Técnico Laboral Desarrollo de Software</p> <!-- Texto informativo -->
+      <p class="footer-small">
+        Proyecto integrador CESDE | <!-- Descripción del proyecto -->
+        <a href="https://www.un.org/sustainabledevelopment/es/education/" target="_blank" rel="noopener">ODS 4</a>
+        Equipo <a href="que.html#equipo">BAMKB</a> <!-- Enlace interno al equipo -->
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+  <!-- JavaScript necesario para que los componentes interactivos de Bootstrap funcionen (menú desplegable, etc.) -->
+
+</body>
+</html>
+

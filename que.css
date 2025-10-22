@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+:root {
+  --pink: #F2A7AD;       
+  --magenta: #F20CA2;     
+  --blue: #5464BF;      
+  --yellow: #F2E205;      
+  --orange: #F27405; 
+  --text-dark: #333;    
+  --bg-light: #ffffff;  
+  --bg-soft: #f8f8f8;     
+}
+
+* {
+  margin: 0;                     
+  padding: 0;                    
+  box-sizing: border-box;        
+  font-family: 'Inter', sans-serif;
+}
+
+
+/* Navbar */
+.custom-navbar {
+  background: var(--bg-light);                  
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);  
+}
+
+.logo {
+  width: 160px; /* Tamaño del logo */
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05); 
+}
+
+.nav-link {
+  color: var(--text-dark); /* Color del texto de los enlaces */
+  margin: 0 12px; /* Espaciado entre enlaces */
+  font-weight: 500; /* Grosor medio del texto */
+  position: relative; /* Necesario para la línea decorativa al pasar el mouse */
+  text-decoration: none; /* Quita subrayado */
+}
+
+.nav-link::after {
+  content: ""; /* Crea una línea decorativa debajo del texto */
+  position: absolute;
+  width: 0; /* Empieza oculta */
+  height: 2px; /* Grosor de la línea */
+  left: 0;
+  bottom: -4px; /* Posición debajo del texto */
+  background: var(--magenta); /* Color de la línea */
+  transition: width 0.3s ease; /* Animación suave al aparecer */
+}
+
+.nav-link:hover {
+  color: var(--magenta); /* Cambia el color del texto al pasar */
+}
+
+.nav-link:hover::after {
+  width: 100%; /* La línea crece hasta cubrir todo el texto */
+}
+
+
+/* Sección principal */
+.hero-que {
+  position: relative;
+  background: url("https://images.pexels.com/photos/8466699/pexels-photo-8466699.jpeg") no-repeat center/cover;
+  height: 60vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-que::before {
+  content: ""; 
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.55);               
+  z-index: 1;
+}
+
+.hero-que .container {
+  position: relative;                           
+  z-index: 2;
+}
+
+.hero-que h1 {
+  font-size: 2.5rem;
+  font-weight: 800;                          
+}
+
+.hero-que span {
+  color: var(--magenta);                    
+}
+
+
+/* Parte de los detalles del proyecto */
+.section-details {
+  padding: 4rem 5%;                           
+  background: var(--bg-soft);                  
+  color: var(--text-dark);                    
+}
+
+.section-title {
+  font-size: 2rem;                            
+  font-weight: 700;                       
+  color: var(--magenta);                 
+  text-align: center;                             
+  margin-bottom: 2rem;                         
+}
+
+
+/* Frase*/
+.quote-section {
+  background: var(--blue);                     
+  color: white;                                
+  padding: 3rem 5%; /* Espacio de la frase */
+  text-align: center; /* Centrado */
+}
+
+
+/* ¿Qué buscamos? */
+.section-buscamos {
+  background: var(--bg-light);
+  padding: 4rem 5%; /* Espacio */
+}
+
+.info-card {
+  background: var(--bg-soft);                  
+  border-radius: 10px;                        
+  padding: 1.5rem;                                
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);     
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones de las cartas */
+}
+
+.info-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Colores de las tarjetas */
+.card-1 { border-top: 5px solid var(--blue); }
+.card-2 { border-top: 5px solid var(--magenta); }
+.card-3 { border-top: 5px solid var(--yellow); }
+
+
+/* Equipo */
+.team-section {
+  background: var(--bg-light);                   
+  padding: 4rem 5%;                            
+}
+
+.team-section span {
+  font-size: 1rem;                               
+  color: var(--blue);                       
+}
+
+.team-section .intro {
+  max-width: 600px;                           
+  margin: 0 auto 2rem;                          
+  color: #555;                                 
+}
+
+/* Efectos en las fotos del equipo */
+.rounded-circle {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rounded-circle:hover {
+  transform: scale(1.07); /* Aumenta tamaño cuando se pasa el mouse */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25); /* Pone sombra */
+}
+
+/* Colores del borde de cada miembro */
+.border-bryan { border: 4px solid var(--pink); }
+.border-alejandro { border: 4px solid var(--magenta); }
+.border-manuela { border: 4px solid var(--blue); }
+.border-kevin { border: 4px solid var(--yellow); }
+.border-brahiam { border: 4px solid var(--orange); }
+
+
+/* Footer */
+.custom-footer {
+  background: var(--bg-light);                
+  color: var(--text-dark);                      
+  padding: 24px 0;                              
+  border-top: 1px solid #ddd;                   
+  text-align: center;                         
+}
+
+.custom-footer a {
+  color: var(--magenta);                        
+  text-decoration: none;                        
+}
+
+.custom-footer a:hover {
+  text-decoration: underline;                 
+}
+
+.footer-small {
+  font-size: 0.9rem;                            
+  opacity: 0.85;                                 
+}
+
+
+/* Botón */
+.btn-up {
+  position: fixed;                                
+  bottom: 25px;                            
+  right: 25px;                                  
+  background: var(--magenta);                    
+  color: #fff;                                   
+  border-radius: 50%;                           
+  width: 50px;
+  height: 50px;
+  display: flex;                               
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;                            
+  text-decoration: none;                         
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);       
+  transition: all 0.3s ease;                     
+}
+
+.btn-up:hover {
+  background: var(--yellow);                    
+  color: #000;                                 
+  transform: translateY(-4px);                 
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);        
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-que h1 {
+    font-size: 2rem;
+  }
+
+  .section-details, .section-buscamos {
+    padding: 3rem 8%;
+  }
+
+  .info-card {
+    margin-bottom: 1rem;
+  }
+
+  .section-buscamos img {
+    max-width: 90%;
+  }
+}
+

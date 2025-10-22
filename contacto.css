@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'); 
+
+:root {
+  --bg-white: #ffffff;  
+  --text-dark: #111111;  
+  --muted: #6b6b6b;      
+  --magenta: #F20CA2;   
+  --blue: #5464BF;     
+  --yellow: #F2E205;    
+  --orange: #F27405;     
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body{
+  background: var(--bg-white);
+  color: var(--text-dark); 
+  line-height: 1.6; 
+  -webkit-font-smoothing: antialiased; 
+}
+
+.container{
+  width: 94%; /* Ancho del contenedor */
+  max-width: var(--container-max); /* No sobrepasa el ancho máximo que se estableció */
+  margin: 0 auto; /* Centra horizontalmente */
+}
+
+/* Navbar */
+.navbar{
+  background: var(--bg-white); /* Fondo blanco */
+  padding: 12px 0; /* Espaciado vertical */
+}
+
+.navbar .container{
+  display: flex; 
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: space-between; /* Espacia elementos a los extremos */
+}
+
+.logo{
+  width: 160px; /* Ancho del logo */
+  height: auto; /* Ajusta la altura automáticamente */
+  display: block; /* Quita el espacio inferior que tienen las imágenes inline */
+}
+
+.nav-links{
+  list-style: none; /* Quita los puntos de lista */
+  display: flex; /* Muestra los enlaces en línea */
+  gap: 22px; /* Espacio entre enlaces */
+  align-items: center; /* Centra verticalmente */
+}
+
+.nav-links a{
+  text-decoration: none; /* Quita el subrayado */
+  color: var(--text-dark); /* Texto oscuro */
+  font-weight: 500; /* Peso medio */
+  transition: color 0.2s ease; /* Transición suave al cambiar de color */
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+  color: var(--magenta); /* Cambia el color al pasar el mouse */
+}
+
+/* Sección principal */
+.hero{
+  height: 68vh; /* Alto */
+  position: relative; /* Para posicionar elementos dentro */
+  display: flex; /* Usa flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  text-align: center; /* Centra el texto */
+  color: #fff; /* Texto blanco */
+  background: url('https://images.pexels.com/photos/1181269/pexels-photo-1181269.jpeg')
+  center/cover no-repeat; /* Imagen de fondo centrada y que cubre todo */
+}
+
+.hero::before{
+  content: ""; /* Crea una capa vacía */
+  position: absolute; /* Cubre todo el contenedor */
+  inset: 0; /* Ocupa todo el ancho y alto */
+  background: rgba(0,0,0,0.5); /* Filtro oscuro semitransparente */
+}
+
+.hero-text{
+  position: relative; /* Se sitúa encima del fondo oscuro */
+  z-index: 2; /* Prioridad sobre la capa oscura */
+  max-width: 900px; /* Ancho máximo */
+  padding: 0 20px; /* Espaciado lateral */
+}
+
+.hero h1{
+  font-size: 2rem; /* Tamaño del título */
+  margin-bottom: 12px; /* Espaciado inferior */
+  font-weight: 700; /* Negrita */
+}
+
+.hero p{
+  font-size: 1.05rem; /* Tamaño del texto */
+  color: rgba(255,255,255,0.9); /* Blanco un poco transparente */
+}
+
+/* Objetivo */
+.objetivo{
+  padding: 48px 0; /* Espaciado vertical */
+  background: var(--bg-white); /* Fondo blanco */
+}
+
+.objetivo .container{
+  display: flex; /* Flexbox para organizar contenido */
+  gap: 30px; /* Espacio entre columnas */
+  align-items: center; /* Centra verticalmente */
+  justify-content: space-between; /* Espacia los elementos */
+  flex-wrap: wrap; /* Permite que salten de línea en pantallas pequeñas */
+}
+
+.objetivo h2{
+  color: var(--magenta); /* Título magenta */
+  margin-bottom: 1rem; /* Espacio inferior */
+}
+
+.objetivo p{
+  max-width: 600px; /* Ancho máximo del texto */
+}
+
+.img-rounded{
+  width: 360px; /* Tamaño de la imagen */
+  max-width: 100%; /* No excede el ancho del contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+  object-fit: cover; /* Ajusta sin deformar la imagen */
+}
+
+/* Diseño de la frase */
+.frase-magenta{
+  background: var(--magenta); /* Fondo magenta */
+  color: #fff; /* Texto blanco */
+  padding: 2rem 6%; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+  font-weight: 500; /* Peso medio */
+}
+
+.desafio{
+  padding: 48px 0; /* Espaciado vertical */
+  background: #fafafa; /* Fondo gris claro */
+  text-align: center; /* Centra el texto */
+}
+
+.desafio h2{
+  color: var(--magenta); /* Título magenta */
+  margin-bottom: 1rem; /* Espaciado inferior */
+}
+
+.cards{
+  display: grid; /* Crea cuadrícula */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Ajuste automático según tamaño */
+  gap: 1rem; /* Espaciado entre tarjetas */
+  margin-top: 1.5rem; /* Margen superior */
+}
+
+.card{
+  border-radius: 10px; /* Bordes redondeados */
+  color: #fff; /* Texto blanco */
+  padding: 1.5rem; /* Relleno interno */
+}
+
+.card.magenta{ background: var(--magenta); } /* Tarjeta magenta */
+.card.azul{ background: var(--blue); } /* Tarjeta azul */
+.card.amarillo{ background: var(--yellow); color: #111; } /* Tarjeta amarilla con texto oscuro */
+.card.naranja{ background: var(--orange); color: #111; } /* Tarjeta naranja con texto oscuro */
+
+.pilares{
+  padding: 48px 0; /* Espaciado vertical */
+  background: var(--bg-white); /* Fondo blanco */
+  text-align: center; /* Texto centrado */
+}
+
+.pilares h2{
+  color: var(--magenta); /* Título magenta */
+}
+
+.pilares-grid{
+  display: grid; /* Cuadrícula para pilares */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Ajuste automático */
+  gap: 1rem; /* Espaciado entre elementos */
+  margin-top: 2rem; /* Margen superior */
+}
+
+.pilar{
+  background: white; /* Fondo blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta contenido que sobresalga */
+}
+
+.pilar img{
+  width: 100%; /* Imagen ocupa todo el ancho */
+  height: 180px; /* Altura fija */
+  object-fit: cover; /* Ajuste sin deformación */
+}
+
+.pilar h3{
+  color: var(--magenta); /* Subtítulo magenta */
+  margin: 0.8rem; /* Margen general */
+}
+
+.pilar p{
+  margin: 0 0.8rem 1rem; /* Márgenes alrededor del texto */
+}
+
+.resultados{
+  padding: 48px 0; /* Espaciado vertical */
+  background: #fafafa; /* Fondo gris claro */
+  text-align: center; /* Centra el contenido */
+}
+
+.resultados ul{
+  list-style: "✔ "; /* Viñeta tipo check */
+  max-width: 600px; /* Ancho máximo */
+  margin: 0 auto 2rem; /* Centrado */
+  text-align: left; /* Texto alineado a la izquierda */
+}
+
+.resultados li{
+  margin-bottom: 0.5rem; /* Espaciado entre ítems */
+}
+
+.resultados img{
+  max-width: 600px; /* Ancho máximo */
+  width: 100%; /* Se adapta al contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.mision{
+  background: var(--blue); /* Fondo azul */
+  color: white; /* Texto blanco */
+  text-align: center; /* Centra el texto */
+  padding: 3rem 1.5rem; /* Espaciado interno */
+}
+
+.btn-mision{
+  display: inline-block; /* Se comporta como botón */
+  background: var(--magenta); /* Fondo magenta */
+  color: white; /* Texto blanco */
+  text-decoration: none; /* Quita subrayado */
+  padding: 0.7rem 1.4rem; /* Relleno interno */
+  border-radius: 25px; /* Bordes redondeados */
+  margin-top: 1rem; /* Margen superior */
+  transition: background 0.3s; /* Transición suave del fondo */
+}
+
+.btn-mision:hover{
+  background: var(--yellow); /* Fondo cambia a amarillo */
+  color: #111; /* Texto oscuro */
+}
+
+/* Footer y contenido de la página*/
+.section {
+  padding: 60px 10%; /* Espaciado interno */
+  text-align: center; /* Centra el texto */
+}
+
+.custom-footer {
+  background: var(--bg-white); /* Fondo blanco */
+  color: var(--text-dark); /* Texto oscuro */
+  text-align: center; /* Centra el contenido */
+  padding: 25px 10%; /* Espaciado interno */
+  border-top: 1px solid rgba(0,0,0,0.1); /* Línea superior tenue */
+}
+
+.custom-footer a {
+  color: var(--magenta); /* Enlaces de color */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 500;
+}
+
+.custom-footer a:hover {
+  text-decoration: underline; /* Subraya al pasar el mouse */
+}
+
+/* Responsive*/
+@media (max-width: 992px){
+  .objetivo .container{
+    flex-direction: column; /* Apila los elementos en columna */
+    align-items: center; /* Centra los elementos */
+  }
+  .img-rounded{
+    margin-top: 20px; /* Margen superior extra */
+  }
+}
+
+@media (max-width: 576px){
+  .hero h1{
+    font-size: 1.4rem; /* Reduce tamaño del título */
+  }
+  .hero p{
+    font-size: 0.95rem; /* Reduce tamaño del texto */
+  }
+  .cards{
+    grid-template-columns: 1fr; /* Muestra una sola tarjeta por fila */
+  }
+  .pilares-grid{
+    grid-template-columns: 1fr; /* Muestra un pilar por fila */
+  }
+}
