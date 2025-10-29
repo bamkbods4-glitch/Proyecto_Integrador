@@ -159,6 +159,10 @@ body {
   overflow: hidden; /* Oculta el exceso de contenido */
 }
 
+.pilar a{
+  text-decoration: none; /* Esto elimina el subrayado del enlace */
+}
+
 .pilar img {
   width: 100%; /* Imagen ocupa todo el ancho */
   height: 180px; /* Altura fija */
