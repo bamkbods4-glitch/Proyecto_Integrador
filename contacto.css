@@ -306,3 +306,11 @@ body{
     grid-template-columns: 1fr; /* Muestra un pilar por fila */
   }
 }
+
+.formulario {
+  text-align: center;
+}
+
+.qrform {
+  text-align: center;
+}
