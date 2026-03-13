@@ -58,6 +58,22 @@ body {
   color: var(--magenta); /* Cambia el color al pasar */
 }
 
+.btn-login {
+    color: var(--magenta) !important;
+    margin: 0 10px;
+    font-weight: 900 !important;
+    border: 2px solid var(--magenta);
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: all 0.3s !important;
+    text-decoration: none;
+}
+
+.btn-login:hover {
+    background-color: var(--magenta);
+    color: white !important;
+}
+
 .frase-magenta {
   background: var(--magenta); 
   color: white; /* Texto blanco */
@@ -134,7 +150,7 @@ body {
 .magenta { background: var(--magenta); } /* Tarjeta rosada */
 .azul { background: var(--blue); } /* Tarjeta azul */
 .amarillo { background: var(--yellow); color: #222; } /* Tarjeta amarilla con texto oscuro */
-.naranja { background: var(--orange); } /* Tarjeta naranja */
+.naranja { background: var(--magenta); } /* Tarjeta rosada */
 
 .pilares {
   background: var(--bg-soft); /* Fondo gris claro */

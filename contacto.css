@@ -67,6 +67,22 @@ body{
   color: var(--magenta); /* Cambia el color al pasar el mouse */
 }
 
+.btn-login {
+    color: var(--magenta) !important;
+    margin: 0 10px;
+    font-weight: 900 !important;
+    border: 2px solid var(--magenta);
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: all 0.3s !important;
+    text-decoration: none;
+}
+
+.btn-login:hover {
+    background-color: var(--magenta);
+    color: white !important;
+}
+
 /* Sección principal */
 .hero{
   height: 68vh; /* Alto */
@@ -171,7 +187,7 @@ body{
 .card.magenta{ background: var(--magenta); } /* Tarjeta magenta */
 .card.azul{ background: var(--blue); } /* Tarjeta azul */
 .card.amarillo{ background: var(--yellow); color: #111; } /* Tarjeta amarilla con texto oscuro */
-.card.naranja{ background: var(--orange); color: #111; } /* Tarjeta naranja con texto oscuro */
+.card.naranja{ background: var(--magenta); color: #111; } /* Tarjeta naranja con texto oscuro */
 
 .pilares{
   padding: 48px 0; /* Espaciado vertical */

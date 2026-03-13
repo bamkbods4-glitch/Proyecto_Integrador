@@ -60,6 +60,21 @@
   width: 100%; /* La línea crece hasta cubrir todo el texto */
 }
 
+.btn-login {
+    color: var(--magenta) !important;
+    margin: 0 10px;
+    font-weight: 900 !important;
+    border: 2px solid var(--magenta);
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: all 0.3s !important;
+    text-decoration: none;
+}
+
+.btn-login:hover {
+    background-color: var(--magenta);
+    color: white !important;
+}
 
 /* Sección principal */
 .hero-que {
@@ -175,11 +190,11 @@
 }
 
 /* Colores del borde de cada miembro */
-.border-bryan { border: 4px solid var(--pink); }
+.border-bryan { border: 4px solid var(--blue); }
 .border-alejandro { border: 4px solid var(--magenta); }
-.border-manuela { border: 4px solid var(--blue); }
-.border-kevin { border: 4px solid var(--yellow); }
-.border-brahiam { border: 4px solid var(--orange); }
+.border-manuela { border: 4px solid var(--yellow); }
+.border-kevin { border: 4px solid var(--blue); }
+.border-brahiam { border: 4px solid var(--magenta); }
 
 
 /* Footer */

@@ -48,6 +48,25 @@ body {
   font-weight: 500;             /* Grosor del texto */
 }
 
+
+
+.btn-login {
+    color: var(--magenta) !important;
+    margin: 0 10px;
+    font-weight: 900 !important;
+    border: 2px solid var(--magenta);
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: all 0.3s !important;
+    text-decoration: none;
+}
+
+.btn-login:hover {
+    background-color: var(--magenta);
+    color: white !important;
+}
+
+
 .custom-navbar .nav-link:hover {
   color: var(--magenta); /* Cambia el color del enlace al pasar el cursor */
 }

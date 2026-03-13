@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases para Todos - Iniciar Sesión</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="./img/logo.png" type="image/x-icon" /> <!-- Favicon -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a class="navbar-brand d-flex align-items-center" href="./index.html" aria-label="Ir a inicio">
+        <img src="./img/logo.png" alt="Clases para todos" class="logo">
+      </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="que.html">¿Qué es?</a></li>
+                <li><a href="objetivo.html">Objetivo</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+                <li><a href="login.html" class="btn-login">Iniciar Sesión</a></li>
+            </ul>
+            <button class="menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="24" height="24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero con formulario -->
+    <main class="hero">
+        <div class="overlay"></div>
+        <div class="login-card">
+            <div class="login-header">
+                <div class="avatar">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="40" height="40">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                    </svg>
+                </div>
+                <h1>Iniciar Sesión</h1>
+                <p>Accede a tu cuenta de Clases para Todos</p>
+            </div>
+
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" placeholder="tu@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox">
+                        <span>Recordarme</span>
+                    </label>
+                    <a href="recuperar.html" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <button type="submit" class="btn-submit">Iniciar Sesión</button>
+            </form>
+
+            <div class="register-link">
+                <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-title">Técnico Laboral Desarrollo de Software</p>
+            <p class="footer-sub">
+                Proyecto integrador CESDE | 
+                <a href="https://www.un.org/sustainabledevelopment/es/education/" target="_blank" rel="noopener">ODS 4</a> |
+        Equipo <a href="./que.html#equipo">BAMKB</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
