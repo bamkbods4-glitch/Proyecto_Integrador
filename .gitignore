@@ -1,0 +1,12 @@
+# Archivos del sistema (los que te aparecían antes)
+.DS_Store
+__MACOSX/
+Thumbs.db
+
+# Carpetas de entorno o dependencias (por si usas Node más adelante)
+node_modules/
+.env
+
+# Archivos temporales de editores
+.vscode/
+.idea/
