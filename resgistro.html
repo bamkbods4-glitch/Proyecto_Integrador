@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clases para Todos - Iniciar Sesión</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Clases para Todos - Registro</title>
+    <link rel="stylesheet" href="registro.css">
     <link rel="icon" href="./img/logo.png" type="image/x-icon" /> <!-- Favicon -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -14,7 +14,6 @@
         <div class="container nav-container">
             <a class="navbar-brand d-flex align-items-center" href="./index.html" aria-label="Ir a inicio">
         <img src="./img/logo.png" alt="Clases para todos" class="logo">
-      </a>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="que.html">¿Qué es?</a></li>
@@ -33,21 +32,31 @@
     <!-- Hero con formulario -->
     <main class="hero">
         <div class="overlay"></div>
-        <div class="login-card">
-            <div class="login-header">
+        <div class="register-card">
+            <div class="register-header">
                 <div class="avatar">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="40" height="40">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
                     </svg>
                 </div>
-                <h1>Iniciar Sesión</h1>
-                <p>Accede a tu cuenta de Clases para Todos</p>
+                <h1>Crear Cuenta</h1>
+                <p>Únete a Clases para Todos</p>
             </div>
 
-            <form class="login-form" id="loginForm">
+            <form class="register-form" id="registerForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" placeholder="Tu nombre completo" required>
+                </div>
+
                 <div class="form-group">
                     <label for="email">Correo electrónico</label>
                     <input type="email" id="email" placeholder="tu@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="userId">ID de usuario</label>
+                    <input type="text" id="userId" placeholder="Ej: usuario123" required>
                 </div>
 
                 <div class="form-group">
@@ -55,22 +64,45 @@
                     <input type="password" id="password" placeholder="••••••••" required>
                 </div>
 
-                <div class="form-options">
-                    <label class="checkbox-label">
-                        <input type="checkbox">
-                        <span>Recordarme</span>
-                    </label>
-                    <a href="recuperar.html" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmar contraseña</label>
+                    <input type="password" id="confirmPassword" placeholder="••••••••" required>
                 </div>
 
-                <button type="submit" class="btn-submit">Iniciar Sesión</button>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" required>
+                        <span>Acepto los <a href="terminos.html">términos y condiciones</a></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-submit">Registrarse</button>
             </form>
 
-            <div class="register-link">
-                <p>¿No tienes cuenta? <a href="resgistro.html">Regístrate aquí</a></p>
+            <div class="login-link">
+                <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
             </div>
         </div>
     </main>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Verificar que las contraseñas coincidan
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Las contraseñas no coinciden. Por favor, verifica.');
+                return;
+            }
+            
+            // Mostrar mensaje de éxito y redirigir
+            alert('¡Registro exitoso! Ahora puedes iniciar sesión.');
+            window.location.href = 'login.html';
+        });
+    </script>
 
     <!-- Footer -->
     <footer class="footer">
@@ -78,8 +110,8 @@
             <p class="footer-title">Técnico Laboral Desarrollo de Software</p>
             <p class="footer-sub">
                 Proyecto integrador CESDE | 
-                <a href="https://www.un.org/sustainabledevelopment/es/education/" target="_blank" rel="noopener">ODS 4</a> |
-        Equipo <a href="./que.html#equipo">BAMKB</a>
+                <a href="https://www.un.org/sustainabledevelopment/es/education/" target="_blank" rel="noopener noreferrer">ODS 4</a> | 
+                Equipo <a href="equipo.html">BAMKB</a>
             </p>
         </div>
     </footer>
