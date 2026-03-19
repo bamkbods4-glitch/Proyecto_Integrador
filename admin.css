@@ -1,0 +1,242 @@
+:root {
+    --bg-white: #ffffff;
+    --bg-light: #f8f9fa;
+    --text-dark: #111111;
+    --muted-color: #6b6b6b;
+    --magenta: #F20CA2;
+    --blue: #5464BF;
+    --yellow: #F2E205;
+    --orange: #F27405;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-light);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--bg-white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 12px 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.custom-navbar .logo {
+  width: 180px;       /* Tamaño del logo */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.logo {
+  width: 150px; /* Tamaño del logo */
+}
+
+.admin-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.admin-badge {
+    background-color: var(--blue);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    color: var(--magenta);
+    border: 2px solid var(--magenta);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.btn-logout:hover {
+    background-color: var(--magenta);
+    color: white;
+}
+
+/* Panel Principal */
+.admin-panel {
+    flex: 1;
+    padding: 40px 16px;
+}
+
+.panel-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.panel-header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.panel-header p {
+    color: var(--muted-color);
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.admin-card {
+    background-color: var(--bg-white);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.admin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.card-icon.create {
+    background-color: var(--magenta);
+    color: white;
+}
+
+.card-icon.view {
+    background-color: var(--blue);
+    color: white;
+}
+
+.card-icon.students {
+    background-color: var(--orange);
+    color: white;
+}
+
+.card-icon.settings {
+    background-color: #6b7280;
+    color: white;
+}
+
+.admin-card h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.admin-card p {
+    color: var(--muted-color);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.btn-card {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--magenta);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-card:hover {
+    background-color: var(--blue);
+}
+
+.btn-card.btn-secondary {
+    background-color: var(--blue);
+}
+
+.btn-card.btn-secondary:hover {
+    background-color: var(--magenta);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bg-white);
+    border-top: 1px solid #e5e7eb;
+    padding: 24px 16px;
+    text-align: center;
+}
+
+.footer-title {
+    color: var(--text-dark);
+}
+
+.footer-sub {
+    font-size: 14px;
+    color: var(--muted-color);
+    margin-top: 4px;
+}
+
+.footer-sub a {
+    color: var(--magenta);
+    text-decoration: none;
+}
+
+.footer-sub a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .panel-header h1 {
+        font-size: 24px;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}

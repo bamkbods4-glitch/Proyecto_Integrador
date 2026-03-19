@@ -63,7 +63,7 @@
                     <a href="recuperar.html" class="forgot-link">¿Olvidaste tu contraseña?</a>
                 </div>
 
-                <button type="submit" class="btn-submit">Iniciar Sesión</button>
+                 <a href="admin.html" id="linkSubmit" class="btn-submit">Iniciar Sesión</a>
             </form>
 
             <div class="register-link">
@@ -83,5 +83,23 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const linkSubmit = document.getElementById('linkSubmit');
+
+        linkSubmit.addEventListener('click', function(event) {
+            // Verificamos si el formulario es válido (revisa los 'required')
+            if (!loginForm.checkValidity()) {
+                // Si NO es válido, cancelamos el clic del enlace
+                event.preventDefault();
+                // Forzamos al navegador a mostrar los mensajes de error
+                loginForm.reportValidity();
+            } else {
+                // Si es válido, el enlace funcionará normalmente y te llevará a admin.html
+                console.log("Formulario válido, redirigiendo...");
+            }
+        });
+    </script>
 </body>
 </html>

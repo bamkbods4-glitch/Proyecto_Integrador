@@ -216,7 +216,11 @@ body {
     text-decoration: underline;
 }
 
-.btn-submit {
+ .btn-submit {
+    display: inline-block;    /* Importante para que tome el padding y ancho */
+    text-align: center;
+    text-decoration: none;    /* ESTA LÍNEA QUITA EL SUBRAYADO */
+    
     width: 100%;
     padding: 12px;
     background-color: var(--magenta);
@@ -228,11 +232,12 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
     font-family: inherit;
+    box-sizing: border-box;   /* Para que el padding no ensanche el botón */
 }
 
 .btn-submit:hover {
-    background-color: var(--blue);
-}
+    background-color: #c4158a;
+} 
 
 .register-link {
     margin-top: 24px;
